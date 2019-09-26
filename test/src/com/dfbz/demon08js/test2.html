@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //创建一个正则表达式
+    // var reg = /^[\^a-zA-Z]/;
+    // var reg = new RegExp("^[\^a-zA-Z]{1,}");
+    // var reg = new RegExp("[\^a-zA-Z]{1,}$");
+    // var reg = new RegExp("^[\^a-zA-Z]{1,}$");
+    var reg = new RegExp("[\^a-zA-Z]");
+    // var reg = new RegExp("^[\^a-zA-Z]+$");
+    // var reg2 = new RegExp("^[a-zA-Z]"
+    //test(字符串)，如果匹配返回true，否则返回false
+    // console.log(reg2.test("=123b"));
+    console.log(reg.test("a123"));
+    console.log(reg.test("123abbbbSADAF"));
+    console.log(reg.test("123"));
+    console.log(reg.test("12b"));
+    console.log(reg.test("abc"));
+    console.log(reg.test("ab"));
+    console.log(reg.test("1658"));
+    console.log(reg.test("928"));
+    console.log(reg.test("739"));
+    console.log(reg.test("abb"));
+    console.log(reg.test("hahjfgllo"));
+    console.log(reg.test("HHAHJaaa"));
+    console.log(reg.test("354545TRU"));
+    console.log(reg.test("adadad354545TRU"));
+    console.log(reg.test("354545TRU55434545"));
+
+
+</script>
+</body>
+</html>

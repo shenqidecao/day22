@@ -1,0 +1,1 @@
+document.write("外部脚本输出" + "<br/>");

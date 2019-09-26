@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="clock"></h1>
+<hr>
+<input type="button" value="开始" onclick="begin()" id="begin">
+<input type="button" value="暂停" onclick="pause()" id="pause" disabled="disabled">
+<script type="text/javascript">
+    //创建全局变量
+    var timer = 0;
+    //开始按钮
+    function begin() {
+        //每过1秒设置时间到h1中，返回值就是计时器
+        timer = window.setInterval("start()", 1000);
+        //设置按钮不可用
+        document.getElementById("begin").disabled = true;
+        //暂停按钮设置为可用
+        document.getElementById("pause").disabled = false;
+    }
+    //开始时间
+    function start() {
+        document.getElementById("clock").innerHTML = new Date().toLocaleString();//设置现在的时间
+    }
+    //暂停按钮
+    function pause() {
+        //清除计时器
+        window.clearInterval(timer);
+        //暂停按钮不可用
+        document.getElementById("pause").disabled = true;
+        //开始按钮设置为可用
+        document.getElementById("begin").disabled = false;
+    }
+</script>
+</body>
+</html>

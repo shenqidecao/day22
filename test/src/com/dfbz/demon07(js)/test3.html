@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var num1="1.4";
+    var num2="2.1";
+    var res=parseInt(num1)+parseInt(num2);
+    document.write(res+"<br/>");
+
+    var num3="9";
+    // var res1=parseInt(num1)+parseInt(num3);
+    // document.write(res1+"<br/>");
+    console.log(!isNaN(num3));
+
+    if (!isNaN(num3)) {
+        var res1=parseInt(num1)+parseInt(num3);
+        document.write(res1+"<br/>");
+        console.log(res1);
+    }else {
+        document.write("数字转换失败"+"<br/>");
+    }
+
+
+</script>
+</body>
+</html>

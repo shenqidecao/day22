@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //命名函数的调用方式
+    function clickMe() {
+        alert("我是按钮1");
+    }
+    //在页面加载完毕以后再执行这个代码
+    window.onload = function () {
+    //使用匿名函数
+    //得到b2这个对象
+        document.getElementById("b2").onclick = function () {
+            alert("我是按钮2");
+        }
+    }
+</script>
+
+<input type="button" value="按钮1" id="b1" onclick="clickMe()">
+<input type="button" value="按钮2" id="b2">
+
+</body>
+</html>

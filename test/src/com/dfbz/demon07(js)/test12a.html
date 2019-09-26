@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="0.jpg" width="500" id="pic">
+<script type="text/javascript">
+    //得到图片对象
+    document.getElementById("pic").onmouseover = function () {
+    //修改它自己的src
+    document.getElementById("pic").src = "2.jpg";
+    //     this.src = "2.jpg";
+    };
+    //鼠标移出事件
+    document.getElementById("pic").onmouseout = function () {
+    //修改它自己的src
+        this.src = "1.jpg";
+    }
+</script>
+</body>
+</html>

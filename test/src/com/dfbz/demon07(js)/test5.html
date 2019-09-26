@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //在浏览器上出现一个输入框
+    // var score = window.prompt("请输入你的分数：", "60");
+    //得到返回值
+    // document.write(score + "<br/>");
+    //返回类型是字符串
+    // document.write(typeof(score) + "<br/>");
+    //弹出一个对话框
+    // window.alert("你的分数是：" + score);
+    // alert("你的分数是：" + score);
+
+
+    //在浏览器上出现一个输入框
+    var score;
+    score=window.prompt("请输入你的分数：");
+    switch (true) {
+        case score >=90 && score <=100:
+            document.write("优秀" + "<br/>");
+            break;
+        case score >=60 && score <90:
+            document.write("及格" + "<br/>");
+            break;
+        case score >=0 && score < 60:
+            document.write("不及格" + "<br/>");
+            break;
+        default:
+            document.write("分数有误" + "<br/>");
+            break;
+    }
+
+</script>
+</body>
+</html>

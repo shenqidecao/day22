@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+城市：
+<select id="city">
+    <option value="广州">广州</option>
+    <option value="深圳">深圳</option>
+    <option value="珠海">珠海</option>
+</select>
+<hr>
+
+英文：<input type="text" id="user1">
+<script>
+    //改变事件
+    document.getElementById("city").onchange=function (ev) {
+        alert(this.value);
+    }
+    //文本框改变事件
+    document.getElementById("user1").onchange=function (ev) {
+        //变成大写
+        this.value=this.value.toUpperCase();
+    }
+</script>
+</body>
+</html>

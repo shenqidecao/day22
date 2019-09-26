@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<img src="0.jpg" id="pic" width="200px">
+
+<script>
+    window.setInterval("changePic()", 3000);
+    //定义全局变量
+    var num = 1;
+    //被调用的函数
+    function changePic() {
+        //得到图片元素
+        var pic = document.getElementById("pic");
+        //换图片地址
+        pic.src = num + ".jpg";
+        //图片名字加1
+        num++;
+        if (num == 5) {
+            num = 0; //重新开始
+        }
+    }
+
+
+    // 计数
+    // var count = 0;
+    //
+    // function pri() {
+    //     console.log(count);
+    //     count++;
+    //     window.setInterval("pri()", 1000);
+    // }
+</script>
+
+</body>
+</html>

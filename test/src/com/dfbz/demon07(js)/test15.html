@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+城市：
+<select id="city">
+    <option value="广州">广州</option>
+    <option value="深圳">深圳</option>
+    <option value="珠海">珠海</option>
+</select>
+<hr>
+英文：<input type="text" id="user1">
+<hr>
+
+<h2 id="key"></h2>
+<script type="text/javascript">
+    //改变事件
+    document.getElementById("city").onchange = function () {
+        alert(this.value); //this是select对象
+    }
+    //文本框改变事件
+    /* document.getElementById("user").onchange = function () {
+    //变成大写
+    this.value = this.value.toUpperCase();
+    }*/
+    //使用松开按键事件
+    document.getElementById("user1").onkeyup = function () {
+//变成大写
+        this.value = this.value.toUpperCase();
+    }
+    //按下键，在h2中显示按下键键盘码，传入一个对象，通过这个对象keyCode属性得到按键编码
+    document.getElementById("user1").onkeydown = function (event) {
+        document.getElementById("key").innerHTML = event.keyCode;
+    }
+</script>
+</body>
+</html>
